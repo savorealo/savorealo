@@ -339,13 +339,41 @@ ai_generations
 
 <br/>
 
+Push to any tracked branch triggers a GitHub Actions workflow that runs checks and deploys automatically — no manual steps needed.
+
+<br/>
+
+**Backend — Cloudflare Worker (GraphQL API)**
+
 <div align="center">
 
-| Branch | Environment | Trigger |
-|---|---|---|
-| `main` | 🔴 Production | Push automatic |
-| `develop` | 🟡 Staging | Push automatic |
-| `feat/*` · `fix/*` | 🟢 Local | Manual |
+| Branch | Project | Worker route | Trigger |
+|---|---|---|---|
+| `main` | `savorealo-api` | `app.savorealo.com/api/*` | Push → GitHub Actions → deploy |
+| `develop` | `savorealo-api-staging` | `develop.app.savorealo.com/api/*` | Push → GitHub Actions → deploy |
+
+</div>
+
+<br/>
+
+**Frontend — Cloudflare Pages (Angular 21)**
+
+<div align="center">
+
+| Branch | Domain | Notes | Trigger |
+|---|---|---|---|
+| `main` | `app.savorealo.com` | Includes internal Worker for SSR (auth page) | Push → GitHub Actions → deploy |
+| `develop` | `develop.app.savorealo.com` | Includes internal Worker for SSR (auth page) | Push → GitHub Actions → deploy |
+
+</div>
+
+<br/>
+
+<div align="center">
+
+| Branch | Role |
+|---|---|
+| `feat/*` · `fix/*` | Local development only — no automatic deploy |
 
 </div>
 
