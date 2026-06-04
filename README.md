@@ -81,7 +81,8 @@ El frontend web y la app Android consumen la API GraphQL del backend y utilizan 
 | `/auth` | Acceso y registro. |
 | `/` | Feed principal. |
 | `/explore` | Exploración de contenido. |
-| `/ai` | Generación de recetas con IA. |
+| `/ai` | Generación de recetas con IA (historial y ajustes). |
+| `/generar-receta` | Agente de recetas con IA (generación paso a paso). |
 | `/saved` | Publicaciones guardadas. |
 | `/chat` | Mensajes. |
 | `/profile` | Perfil propio. |
@@ -89,6 +90,7 @@ El frontend web y la app Android consumen la API GraphQL del backend y utilizan 
 | `/settings` | Ajustes. |
 | `/post/:id` | Detalle de publicación o receta. |
 | `/cook/:id` | Modo cocina. |
+| `/notifications` | Notificaciones. |
 | `/shopping` | Lista de la compra. |
 | `/places` | Lugares gastronómicos. |
 | `/places/:id` | Detalle de lugar. |
@@ -225,7 +227,7 @@ flowchart LR
 | Supabase JS | GraphQL Yoga | Material 3 |
 | PrimeNG + PrimeIcons | Pothos | Navigation Compose |
 | Tailwind CSS | Prisma 7 | Hilt + KSP |
-| SSR con `@angular/ssr/node` | `@prisma/adapter-pg` | Room |
+| SSR con `@angular/ssr` | `@prisma/adapter-pg` | Room |
 | PWA con Angular Service Worker | PostgreSQL / Supabase | Supabase KT |
 | Vitest | Supabase JWT Auth | Retrofit + OkHttp |
 | ESLint + Prettier | Vitest | CameraX |
