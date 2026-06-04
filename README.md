@@ -1,487 +1,454 @@
 <div align="center">
 
-<img src="./hero.svg" width="100%" alt="Savorealo"/>
+<img src="./docs/assets/hero.svg" width="100%" alt="Savorealo" />
 
-<br/>
+<br />
 
-<a href="https://savorealo.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&repeat=true&width=680&height=50&lines=AI-powered+gastronomic+social+network+%F0%9F%8D%B4;Generate+recipes+with+Claude+AI+%F0%9F%A4%96;Share%2C+discover%2C+savour+%F0%9F%8D%B7;Angular+21+%C2%B7+Flutter+%C2%B7+Cloudflare+Workers+%E2%9A%A1;PostgreSQL+17+%C2%B7+29+tables+%C2%B7+RLS+%C2%B7+FTS+%F0%9F%97%84%EF%B8%8F;Final+Degree++%E2%86%92+Startup+%F0%9F%9A%80" alt="Typing SVG"/>
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&repeat=true&width=820&height=52&lines=Red+social+gastron%C3%B3mica+con+IA;Angular+21+SSR%2FPWA+%C2%B7+Android+Kotlin;GraphQL+en+Cloudflare+Workers;Recetas%2C+posts%2C+lugares+y+comunidad" alt="Savorealo typing" />
 
-<br/><br/>
+<br /><br />
 
-<a href="https://savorealo.com">
-  <img src="https://img.shields.io/badge/%F0%9F%8C%90-savorealo.com-FF6B00?style=for-the-badge&labelColor=0a0300"/>
-</a>
+<img src="https://img.shields.io/badge/Savorealo-App_gastron%C3%B3mica-FF6B00?style=for-the-badge&labelColor=0a0300" alt="Savorealo" />
 &nbsp;
-<img src="https://img.shields.io/badge/STATUS-In_development-27ae60?style=for-the-badge&labelColor=0a0300"/>
+<img src="https://img.shields.io/badge/Frontend-Angular_21-FF8C00?style=for-the-badge&logo=angular&logoColor=white&labelColor=0a0300" alt="Angular 21" />
 &nbsp;
-<img src="https://img.shields.io/badge/SPRINT-1_completed-FF6B00?style=for-the-badge&labelColor=0a0300"/>
+<img src="https://img.shields.io/badge/API-Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white&labelColor=0a0300" alt="Cloudflare Workers" />
 &nbsp;
-<img src="https://img.shields.io/badge/PLATFORM-Web_%7C_iOS_%7C_Android-FF8C00?style=for-the-badge&labelColor=0a0300"/>
-
-<br/><br/>
-
-<!-- Language switcher -->
-<a href="./README.md">
-  <img src="https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8-Español-FF6B00?style=flat-square&labelColor=0a0300"/>
-</a>
+<img src="https://img.shields.io/badge/Mobile-Android_Kotlin-FF9A00?style=for-the-badge&logo=android&logoColor=white&labelColor=0a0300" alt="Android Kotlin" />
 &nbsp;
-<img src="https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7-English_(current)-555?style=flat-square&labelColor=0a0300"/>
+<img src="https://img.shields.io/badge/GraphQL-Yoga_%2B_Pothos-E85D04?style=for-the-badge&logo=graphql&logoColor=white&labelColor=0a0300" alt="GraphQL" />
 
-<br/><br/>
+<br /><br />
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./docs/assets/divider.svg" width="100%" alt="" />
 
 </div>
 
-<br/>
+## Resumen del proyecto
 
-## What is Savorealo?
+**Savorealo** es una red social gastronómica centrada en descubrir, guardar, publicar y cocinar recetas, con experiencias sociales como perfiles, seguidores, comentarios, guardados, mensajes, lugares y generación de recetas con IA.
 
-**Savorealo** is the first 100% gastronomic social network with integrated AI. Users publish recipes, food posts and restaurant reviews — and if they don't know what to cook, they tell the AI what ingredients they have and within seconds they receive a personalised recipe ready to publish.
+El proyecto está dividido en tres aplicaciones principales:
 
-> *Not just a recipe app. It's Instagram for foodies, with an AI chef in your pocket.*
+| Parte | Repositorio | Propósito |
+|---|---|---|
+| **Frontend web** | [`savorealo/savorealo_frontend`](https://github.com/savorealo/savorealo_frontend) | App Angular 21 con SSR, PWA, Apollo Angular, PrimeNG, Tailwind CSS y Supabase en cliente. |
+| **Backend** | [`savorealo/api`](https://github.com/savorealo/api) | API GraphQL desplegada en Cloudflare Workers con GraphQL Yoga, Pothos, Prisma 7 y PostgreSQL/Supabase. |
+| **Mobile Android** | [`acanojiDev/TFG-LET-ME-COOK-MOBILE`](https://github.com/acanojiDev/TFG-LET-ME-COOK-MOBILE.git) | App Android nativa con Kotlin, Jetpack Compose, Hilt, Room, Supabase y Retrofit. |
 
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Features
-
-<table>
-<tr>
-<td width="50%">
-
-**Social network**
-- 📸 &nbsp;Personalised feed with multimedia posts
-- 👥 &nbsp;Follow users and restaurants
-- 💬 &nbsp;Comments, likes and saves
-- 📖 &nbsp;Stories with 24h expiration
-- 💌 &nbsp;Direct messages and group chats
-- 🔔 &nbsp;Real-time notifications
-
-</td>
-<td width="50%">
-
-**Gastronomy + AI**
-- 🤖 &nbsp;Recipe generator with Claude AI
-- 📷 &nbsp;Upload a photo — AI identifies ingredients
-- 🌾 &nbsp;Allergen and preference system
-- 🗺️ &nbsp;Restaurant directory with reviews
-- 🔍 &nbsp;Full-text search in Spanish
-- 📊 &nbsp;Culinary categories and filters
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Tech stack
+El frontend web y la app Android consumen la API GraphQL del backend y utilizan Supabase para autenticación y almacenamiento. El backend valida el JWT de Supabase y resuelve operaciones de dominio contra PostgreSQL.
 
 <div align="center">
-
-**Frontend & Mobile**
-
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=angular,flutter,dart,kotlin,tailwind,figma&theme=dark&perline=6"/>
-</a>
-
-<br/><br/>
-
-**Backend & Infrastructure**
-
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=ts,nodejs,graphql,prisma,postgres,cloudflare&theme=dark&perline=6"/>
-</a>
-
-<br/><br/>
-
-**AI, Automation & DevOps**
-
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=github,githubactions,supabase,vitest&theme=dark&perline=4"/>
-</a>
-
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
-<br/>
+## Índice
 
-<details>
-<summary><b>📋 Full stack table</b></summary>
-<br/>
+- [Funcionalidades principales](#funcionalidades-principales)
+- [Arquitectura](#arquitectura)
+- [Stack tecnológico](#stack-tecnológico)
+- [Workflows principales](#workflows-principales)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Instalación y configuración](#instalación-y-configuración)
+- [Ejecución en desarrollo](#ejecución-en-desarrollo)
+- [Construcción y despliegue](#construcción-y-despliegue)
+- [Testing y calidad](#testing-y-calidad)
+- [Notas importantes](#notas-importantes)
 
-| Layer | Technology | Version | Notes |
-|---|---|---|---|
-| **Web framework** | Angular | 21.x | Signals + Zoneless |
-| **UI Components** | PrimeNG + Tailwind CSS | 21.x / v4 | Custom design system |
-| **Mobile** | Flutter + Dart | 3.x | iOS and Android |
-| **Native modules** | Kotlin | — | Android |
-| **API** | GraphQL Yoga v5 | latest | The Guild, spec-compliant |
-| **GraphQL schema** | Pothos | latest | Code-first, type-safe |
-| **ORM** | Prisma + Edge | latest | With Prisma Accelerate |
-| **Backend runtime** | Cloudflare Workers | — | Edge serverless, 300 cities |
-| **Database** | PostgreSQL 17 | via Supabase | 29 tables, RLS, FTS Spanish |
-| **Auth** | Supabase Auth | latest | JWT + OAuth |
-| **Media storage** | Cloudflare R2 | — | No egress fees |
-| **Cache / Sessions** | Cloudflare KV | — | Edge-distributed |
-| **Realtime** | Cloudflare Durable Objects | — | Persistent WebSockets |
-| **Connection pool** | Cloudflare Hyperdrive | — | Workers → Supabase |
-| **Generative AI** | Claude API (Anthropic) | Sonnet 4 | Recipe generation |
-| **AI orchestration** | n8n | — | AI → DB workflow |
-| **Language** | TypeScript 5 strict | 5.x | End-to-end type safety |
-| **Testing** | Vitest + Playwright | latest | Unit + E2E |
-| **CI/CD** | GitHub Actions | — | Automatic deploy |
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
 
-</details>
+## Funcionalidades principales
 
-<br/>
+### Frontend web
 
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
+| Ruta | Página |
+|---|---|
+| `/auth` | Acceso y registro. |
+| `/` | Feed principal. |
+| `/explore` | Exploración de contenido. |
+| `/ai` | Generación de recetas con IA. |
+| `/saved` | Publicaciones guardadas. |
+| `/chat` | Mensajes. |
+| `/profile` | Perfil propio. |
+| `/profile/:username` | Perfil público. |
+| `/settings` | Ajustes. |
+| `/post/:id` | Detalle de publicación o receta. |
+| `/cook/:id` | Modo cocina. |
+| `/shopping` | Lista de la compra. |
+| `/places` | Lugares gastronómicos. |
+| `/places/:id` | Detalle de lugar. |
 
-<br/>
+La app está organizada por páginas y componentes de dominio en `src/app/features/`. Los repositorios de `src/app/core/repositories/` combinan GraphQL y Supabase según el caso: GraphQL para datos de dominio y Supabase para sesión, almacenamiento o capacidades directas del cliente.
 
-## Architecture
+### Mobile Android
+
+Pantallas y rutas principales definidas en `ui/navigation/Routes.kt`:
+
+| Ruta Compose | Pantalla |
+|---|---|
+| `Login` | Acceso de usuario. |
+| `Register` | Registro. |
+| `CompleteProfile` | Completar perfil tras alta o login social. |
+| `Home` | Feed principal móvil. |
+| `Explore` | Exploración de publicaciones y usuarios. |
+| `Generator` | Generador de recetas. |
+| `Profile` | Perfil propio. |
+| `UserProfile(userId)` | Perfil de otro usuario. |
+| `Camera(mode)` | Cámara para posts u otros flujos multimedia. |
+| `PostDetail(postId)` | Detalle de publicación. |
+| `Notifications` | Notificaciones. |
+| `Messages(pendingUserId)` | Listado o inicio de mensajes. |
+| `Conversation(conversationId, otherUserId, otherUserName)` | Conversación directa. |
+| `Following(userId)` / `Followers(userId)` | Listas sociales. |
+| `Settings` | Ajustes. |
+
+La app móvil sigue una separación clara entre `remote` y `repository`: los APIs remotos hablan con Supabase o GraphQL, mientras que los repositorios aplican reglas de negocio, transforman datos y gestionan errores. Room permite persistencia local para recetas generadas, WorkManager soporta tareas diferidas y Hilt centraliza la inyección de dependencias.
+
+### Backend
+
+| Endpoint | Descripción |
+|---|---|
+| `/graphql` | API GraphQL principal. |
+| `/health` | Health check JSON con estado y timestamp. |
+
+Operaciones destacadas:
+
+| Operación | Tipo | Descripción |
+|---|---|---|
+| `checkUsername` | Query | Comprueba disponibilidad de nombre de usuario. |
+| `searchUsers` | Query | Busca usuarios. |
+| `user` | Query | Devuelve datos de un usuario. |
+| `suggestedUsers` | Query | Sugiere perfiles a seguir. |
+| `feed`, `discoverFeed`, `userPosts` | Query | Recuperan publicaciones para distintos contextos. |
+| `notifications`, `pendingFollowRequests` | Query | Notificaciones y solicitudes pendientes. |
+| `updateProfile` | Mutation | Actualiza el perfil del usuario. |
+| `toggleFollow` | Mutation | Sigue o deja de seguir a un usuario. |
+| `respondFollowRequest` | Mutation | Acepta o rechaza una solicitud de seguimiento. |
+| `toggleSave` | Mutation | Guarda o elimina una publicación guardada. |
+| `toggleLike` | Mutation | Marca o desmarca un like. |
+| `addComment`, `deleteComment` | Mutation | Gestiona comentarios. |
+| `generateRecipe`, `createRecipePost` | Mutation | Genera o publica recetas. |
+
+El backend clasifica y traduce errores de base de datos en `src/lib/errors.ts` para evitar exponer mensajes técnicos al cliente.
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
+## Arquitectura
 
 ```mermaid
-graph TD
-  subgraph C["👤 Clients"]
-    WEB["🌐 Angular 21 · Cloudflare Pages"]
-    MOB["📱 Flutter · iOS & Android"]
-  end
+flowchart LR
+  U["Usuario"] --> A["Angular 21 SSR/PWA<br/>savorealo_frontend"]
+  U --> M["Android Kotlin<br/>TFG-LET-ME-COOK-MOBILE"]
+  A -->|Apollo Angular<br/>/graphql| W["Cloudflare Worker<br/>GraphQL Yoga + Pothos"]
+  M -->|Retrofit<br/>/graphql| W
+  A -->|Auth / Storage| S["Supabase"]
+  M -->|Auth / Storage / Realtime| S
+  W -->|JWT Supabase| AUTH["Supabase Auth"]
+  W -->|Prisma 7 + adapter-pg| DB["PostgreSQL / Supabase"]
+  W --> H["/health"]
 
-  subgraph CF["☁️ Cloudflare Edge — 300 cities"]
-    WORKER["⚡ Worker — GraphQL API\nYoga v5 · Pothos · Prisma"]
-    KV["🗄️ KV Store\nSessions · Cache · Rate limit"]
-    R2["📦 R2 Storage\nPhotos · Videos · Media"]
-    DO["🔔 Durable Objects\nRealtime · WebSockets"]
-    HYP["🔌 Hyperdrive\nConnection Pool"]
-  end
-
-  subgraph SB["🟢 Supabase · eu-central-1"]
-    PG["🐘 PostgreSQL 17\n29 tables · RLS · FTS"]
-    AUTH["🔐 Supabase Auth · JWT"]
-  end
-
-  subgraph AI["🤖 AI & Automation"]
-    N8N["⚙️ n8n · Orchestration"]
-    CLAUDE["🧠 Claude API · Anthropic"]
-  end
-
-  WEB -->|GraphQL HTTPS| WORKER
-  MOB -->|GraphQL HTTPS| WORKER
-  WORKER <--> KV
-  WORKER --> R2
-  WORKER <--> DO
-  WORKER --> HYP --> PG
-  WORKER --> AUTH
-  WORKER --> N8N --> CLAUDE
-
-  style CF fill:#1a0800,stroke:#FF6B00,color:#fff
-  style SB fill:#0a1a0a,stroke:#27ae60,color:#fff
-  style AI fill:#0a0a1a,stroke:#7c3aed,color:#fff
-  style C fill:#1a1a1a,stroke:#666,color:#fff
+  classDef orange fill:#1a0800,stroke:#ff6b00,color:#fff;
+  classDef amber fill:#211000,stroke:#ff9a00,color:#fff;
+  classDef green fill:#071a0f,stroke:#27ae60,color:#fff;
+  class A,M,W orange;
+  class DB,S,AUTH green;
+  class U,H amber;
 ```
-
-> **Edge-first.** No servers to manage. No manual scaling. Automatic HTTPS. Deploy in seconds. Estimated MVP cost: **~€5–10/month**.
-
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Database
 
 <div align="center">
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL_17-29_tables-FF6B00?style=flat-square&logo=postgresql&logoColor=white&labelColor=0a0300)
-&nbsp;
-![RLS](https://img.shields.io/badge/RLS-100%25_enabled-27ae60?style=flat-square&labelColor=0a0300)
-&nbsp;
-![FTS](https://img.shields.io/badge/Full--text-Spanish-FF8C00?style=flat-square&labelColor=0a0300)
-&nbsp;
-![Migrations](https://img.shields.io/badge/Migrations-30_applied-3498db?style=flat-square&labelColor=0a0300)
-
+  <img src="./docs/diagrams/flow-request.svg" width="100%" alt="Flujo de request Savorealo" />
 </div>
 
-<br/>
+## Stack tecnológico
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**👤 Users & Social**
-```
-users
-person_profiles
-business_profiles
-user_settings
-follows
-```
-**🌾 Allergens & Prefs**
-```
-allergens
-allergen_ingredients
-user_allergies
-preferences
-user_preferences
-```
-
-</td>
-<td width="33%" valign="top">
-
-**📝 Content**
-```
-posts          ← polymorphic
-recipes        ← post extension
-ingredients
-recipe_ingredients
-post_media
-```
-**❤️ Interactions**
-```
-likes
-comments
-saved_posts
-viewed_posts
-```
-
-</td>
-<td width="33%" valign="top">
-
-**💬 Messaging**
-```
-conversations
-conversation_participants
-direct_messages
-contacts
-```
-**🔔 Events & AI**
-```
-notifications
-feed_events
-places
-place_reviews
-ai_generations
-```
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## AI generation — the differentiator
-
-<div align="center">
-<img src="./flow-ai.svg" width="100%" alt="AI generation flow"/>
-</div>
-
-<br/>
-
-| Flow | Input | Process |
+| Frontend web | Backend | Mobile Android |
 |---|---|---|
-| **Manual** | Ingredients + dietary restrictions | Claude generates → user reviews → publishes |
-| **Photo** | Image of ingredients | Claude Vision identifies → same flow |
-| **n8n** | Orchestration middleware | Retries, per-user rate limiting, metrics |
-
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Request flow
+| Angular 21 | Cloudflare Workers | Kotlin 2.2 |
+| Apollo Angular + GraphQL | Wrangler | Jetpack Compose |
+| Supabase JS | GraphQL Yoga | Material 3 |
+| PrimeNG + PrimeIcons | Pothos | Navigation Compose |
+| Tailwind CSS | Prisma 7 | Hilt + KSP |
+| SSR con `@angular/ssr/node` | `@prisma/adapter-pg` | Room |
+| PWA con Angular Service Worker | PostgreSQL / Supabase | Supabase KT |
+| Vitest | Supabase JWT Auth | Retrofit + OkHttp |
+| ESLint + Prettier | Vitest | CameraX |
+| Husky + lint-staged | TypeScript | WorkManager |
 
 <div align="center">
-<img src="./flow-request.svg" width="100%" alt="Request flow"/>
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
-<br/>
-
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Project activity
+## Workflows principales
 
 <div align="center">
-<img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=savorealo&bg_color=0a0300&color=FF9A00&line=FF6B00&point=FFD080&area=true&area_color=FF6B00&hide_border=false&border_color=FF6B00&title_color=FF9A00&custom_title=Savorealo%20team%20activity"
-  width="100%"
-  alt="Activity graph"
-/>
+  <img src="./docs/diagrams/flow-ai.svg" width="100%" alt="Flujo de IA de Savorealo" />
 </div>
 
-<br/>
+```mermaid
+sequenceDiagram
+  participant App as Angular / Android
+  participant Supabase as Supabase Auth
+  participant API as Worker GraphQL
+  participant DB as PostgreSQL
 
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## CI/CD Pipeline
+  App->>Supabase: Login / sesión
+  Supabase-->>App: JWT
+  App->>API: Authorization: Bearer token
+  API->>API: verifyJWT(token)
+  API->>DB: Prisma query/mutation
+  DB-->>API: Datos de dominio
+  API-->>App: Respuesta GraphQL
+```
 
 <div align="center">
-<img src="./flow-cicd.svg" width="100%" alt="CI/CD pipeline"/>
+  <img src="./docs/diagrams/flow-cicd.svg" width="100%" alt="Flujo CI/CD de Savorealo" />
 </div>
 
-<br/>
-
-Push to any tracked branch triggers a GitHub Actions workflow that runs checks and deploys automatically — no manual steps needed.
-
-<br/>
-
-**Backend — Cloudflare Worker (GraphQL API)**
-
 <div align="center">
-
-| Branch | Project | Worker route | Trigger |
-|---|---|---|---|
-| `main` | `savorealo-api` | `app.savorealo.com/api/*` | Push → GitHub Actions → deploy |
-| `develop` | `savorealo-api-staging` | `develop.app.savorealo.com/api/*` | Push → GitHub Actions → deploy |
-
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
-<br/>
+## Estructura del repositorio
 
-**Frontend — Cloudflare Pages (Angular 21)**
+```text
+tfg/
+├── savorealo/
+│   ├── README.md
+│   └── docs/
+│       ├── assets/
+│       └── diagrams/
+├── savorealo_frontend/
+│   ├── src/app/
+│   │   ├── core/
+│   │   ├── features/
+│   │   ├── graphql/
+│   │   └── shared/
+│   ├── src/environments/
+│   └── package.json
+├── api/
+│   ├── src/
+│   │   ├── index.ts
+│   │   ├── lib/
+│   │   ├── schema/
+│   │   └── services/
+│   ├── prisma/
+│   ├── wrangler.jsonc
+│   └── package.json
+└── TFG-LET-ME-COOK-MOBILE/
+    ├── app/src/main/java/es/PapayaSA/letmecook/
+    │   ├── data/
+    │   ├── di/
+    │   ├── ui/
+    │   ├── utils/
+    │   └── worker/
+    ├── app/build.gradle.kts
+    └── gradle/libs.versions.toml
+```
 
-<div align="center">
+**Frontend web**
 
-| Branch | Domain | Notes | Trigger |
-|---|---|---|---|
-| `main` | `app.savorealo.com` | Includes internal Worker for SSR (auth page) | Push → GitHub Actions → deploy |
-| `develop` | `develop.app.savorealo.com` | Includes internal Worker for SSR (auth page) | Push → GitHub Actions → deploy |
-
-</div>
-
-<br/>
-
-<div align="center">
-
-| Branch | Role |
+| Carpeta | Descripción |
 |---|---|
-| `feat/*` · `fix/*` | Local development only — no automatic deploy |
+| `src/app/` | Núcleo de la aplicación Angular: rutas, configuración y layout funcional. |
+| `src/app/features/` | Páginas por dominio: feed, auth, explore, IA, guardados, chat, perfil, settings, lugares y compra. |
+| `src/app/core/` | Guards, interceptores, modelos, repositorios, servicios, store, tokens y utilidades compartidas. |
+| `src/app/graphql/` | Operaciones GraphQL usadas desde Apollo Angular. |
 
-</div>
+**Backend**
 
-[Conventional Commits](https://www.conventionalcommits.org/) &nbsp;·&nbsp; Commitlint + Husky &nbsp;·&nbsp; PRs max 400 lines
+| Carpeta | Descripción |
+|---|---|
+| `src/index.ts` | Entrada del Worker: CORS, `/graphql`, `/health`, contexto GraphQL, auth JWT y manejo de errores. |
+| `src/lib/` | Utilidades de autenticación, Prisma y clasificación de errores. |
+| `src/schema/` | Schema GraphQL code-first con Pothos, organizado por dominio. |
+| `src/services/` | Servicios de aplicación para lógica reutilizable. |
 
-<br/>
+**Mobile Android**
 
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Repositories
+| Carpeta | Descripción |
+|---|---|
+| `app/.../data/` | Modelos, APIs remotas, repositorios y persistencia local con Room. |
+| `app/.../di/` | Módulos Hilt para Supabase, Retrofit, Room y dependencias de aplicación. |
+| `app/.../ui/` | Pantallas Jetpack Compose, navegación, tema y componentes compartidos. |
+| `app/.../utils/` | Constantes, utilidades de imagen e idioma. |
+| `app/.../worker/` | Workers para recordatorios y subida diferida de posts. |
 
 <div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
 
-| Repository | Description | Main stack |
+## Instalación y configuración
+
+Clona los repositorios:
+
+```bash
+git clone https://github.com/savorealo/savorealo_frontend.git
+git clone https://github.com/savorealo/api.git
+git clone https://github.com/acanojiDev/TFG-LET-ME-COOK-MOBILE.git
+```
+
+Instala dependencias:
+
+```bash
+cd savorealo_frontend && npm install
+cd api && npm install
+cd TFG-LET-ME-COOK-MOBILE && ./gradlew tasks
+```
+
+### Variables de entorno
+
+**Frontend** — `savorealo_frontend/src/environments/environment.ts`:
+
+```ts
+export const environment = {
+  production: false,
+  supabaseUrl: 'https://<project-ref>.supabase.co',
+  supabaseKey: '<supabase-anon-key>',
+  apiUrl: 'http://localhost:8787',  // o https://develop.app.savorealo.com/api en producción
+}
+```
+
+**Backend** — `api/.dev.vars` (Wrangler) y `api/.env` (Prisma CLI):
+
+```bash
+# .dev.vars
+DATABASE_URL=prisma+postgres://accelerate.prisma-data.net/?api_key=TU_KEY
+SUPABASE_JWT_SECRET=tu-jwt-secret
+ENVIRONMENT=development
+
+# .env
+DATABASE_URL=postgresql://...@pooler.supabase.com:6543/postgres?pgbouncer=true
+DIRECT_URL=postgresql://...@pooler.supabase.com:5432/postgres
+```
+
+| Variable | Uso |
+|---|---|
+| `DATABASE_URL` | Conexión del Worker (o Hyperdrive si está disponible). |
+| `DIRECT_URL` | Conexión directa para Prisma CLI, migraciones y generación. |
+| `SUPABASE_JWT_SECRET` | Secreto para verificar tokens de Supabase Auth. |
+| `ENVIRONMENT` | En producción exige usuario autenticado en todas las operaciones. |
+
+**Mobile Android** — `utils/Constants.kt`:
+
+```kotlin
+const val URL = "https://develop.app.savorealo.com/api/"  // producción
+// const val URL = "http://10.0.2.2:8787/"                // emulador local
+// const val URL = "http://<IP_LAN>:8787/"                // dispositivo físico
+```
+
+> Las keys sensibles no deben subirse al repositorio. Usa secretos de Cloudflare/Supabase y archivos locales ignorados por Git.
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
+## Ejecución en desarrollo
+
+| Aplicación | Comando | URL |
 |---|---|---|
-| [`savorealo-web`](#) | Angular 21 frontend | Angular · Tailwind · PrimeNG · Apollo |
-| [`savorealo-mobile`](#) | Flutter iOS/Android app | Flutter · Dart · Kotlin |
-| [`savorealo-api`](#) | GraphQL edge backend | Workers · Yoga v5 · Pothos · Prisma |
-| [`savorealo-infra`](#) | Cloudflare configuration | Wrangler · IaC |
+| **Frontend web** | `cd savorealo_frontend && npm start` | http://localhost:4200 |
+| **Backend (tsx)** | `cd api && npm run dev` | http://localhost:8787/graphql |
+| **Backend (Wrangler)** | `cd api && npm start` | http://localhost:8787/graphql |
+| **Mobile Android** | `cd TFG-LET-ME-COOK-MOBILE && ./gradlew installDebug` | Dispositivo/emulador |
 
-> 🔒 Private repositories — request access from the team.
+El backend también expone un health check en `http://localhost:8787/health`.
 
+Para desarrollo local completo: levanta primero el backend y asegúrate de que `apiUrl` en el frontend apunta a `http://localhost:8787`. Desde el emulador Android usa `http://10.0.2.2:8787/`; desde dispositivo físico, la IP LAN del equipo.
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
-<br/>
+## Construcción y despliegue
 
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
-
-<br/>
-
-## Local development
-
-<details>
-<summary><b>⚡ Backend — GraphQL API (Cloudflare Workers)</b></summary>
-<br/>
+**Frontend web**
 
 ```bash
-cd savorealo-api
-npm install
-cp .env.example .env        # fill in Supabase + Cloudflare credentials
-wrangler dev                # → http://localhost:8787/graphql
+cd savorealo_frontend
+npm run build             # Build estándar
+npm run build:prod        # Build con configuración de producción
+npm run build:cloudflare  # Build para Cloudflare Pages
+npm run serve:ssr:cookeealo  # Sirve el bundle SSR localmente
 ```
-</details>
 
-<details>
-<summary><b>🌐 Web frontend — Angular 21</b></summary>
-<br/>
+**Backend**
 
 ```bash
-cd savorealo-web
-npm install
-cp environments/environment.example.ts environments/environment.ts
-ng serve                    # → http://localhost:4200
+cd api
+npm run deploy      # Publica el Worker con Wrangler
+npm run cf-typegen  # Regenera tipos de Cloudflare desde wrangler.jsonc
 ```
-</details>
 
-<details>
-<summary><b>📱 Mobile — Flutter</b></summary>
-<br/>
+En producción, verifica que `ENVIRONMENT`, `SUPABASE_JWT_SECRET`, base de datos e Hyperdrive estén configurados antes de desplegar.
+
+**Mobile Android**
 
 ```bash
-cd savorealo-mobile
-flutter pub get
-flutter run
+cd TFG-LET-ME-COOK-MOBILE
+./gradlew assembleDebug    # APK debug
+./gradlew assembleRelease  # APK/AAB release (requiere keystore)
 ```
-</details>
 
-<br/>
+La build Android usa `compileSdk 36`, `minSdk 34`, `targetSdk 36` y `applicationId es.PapayaSA.letmecook`. Antes de una release real, revisa firma, ofuscación, secrets y configuración de Supabase/Google.
 
-<div align="center"><img src="./divider.svg" width="100%" alt="—"/></div>
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
 
-<br/>
+## Testing y calidad
 
-## Team
+| Aplicación | Comando | Herramienta |
+|---|---|---|
+| Frontend — tests | `npm test` | Vitest |
+| Frontend — cobertura | `npm run test:cov` | Vitest |
+| Frontend — lint | `npm run lint` | ESLint |
+| Frontend — formato | `npm run format` | Prettier |
+| Backend — tests | `npm test` | Vitest |
+| Mobile — unit tests | `./gradlew test` | JUnit |
+| Mobile — tests instrumentados | `./gradlew connectedAndroidTest` | Espresso |
+
+El frontend incluye Husky + lint-staged para ejecutar lint y tests en cada commit. Android centraliza versiones en `gradle/libs.versions.toml` y usa Gradle Wrapper para builds reproducibles.
+
+### Ejemplo de request GraphQL
+
+```bash
+curl http://localhost:8787/graphql \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{
+    "query": "query SearchUsers($q: String!) { searchUsers(query: $q) { id username avatarUrl } }",
+    "variables": { "q": "adrian" }
+  }'
+```
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
+## Notas importantes
+
+- No subas secrets, JWT secrets, URLs privadas de base de datos ni service keys.
+- En mobile, evita hardcodear claves de Supabase o Google en código fuente antes de publicar builds.
+- Para desarrollo local completo, levanta primero el backend en `http://localhost:8787` y ajusta `apiUrl` del frontend.
+- Para Android Emulator, apunta la URL local a `http://10.0.2.2:8787/`; para móvil físico, usa la IP LAN del equipo.
+- Los errores de base de datos se traducen a mensajes controlados para el cliente y códigos GraphQL/HTTP coherentes.
+- `summary.md` contiene notas internas de trabajo y no forma parte de la documentación final del proyecto.
 
 <div align="center">
 
-<table>
-<tr>
-  <td align="center" width="50%">
-    <br/>
-    <img src="https://img.shields.io/badge/Full--Stack_Web_%2B_Backend-FF6B00?style=for-the-badge&labelColor=0a0300"/>
-    <br/><br/>
-    <sub>Angular 21 · GraphQL API · Cloudflare Workers · TypeScript</sub>
-    <br/><br/>
-  </td>
-  <td align="center" width="50%">
-    <br/>
-    <img src="https://img.shields.io/badge/Mobile_Developer-FF6B00?style=for-the-badge&labelColor=0a0300"/>
-    <br/><br/>
-    <sub>Flutter · Dart · iOS · Android · Kotlin</sub>
-    <br/><br/>
-  </td>
-</tr>
-</table>
+<img src="./docs/assets/divider.svg" width="100%" alt="" />
 
-<br/>
+<br />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=2000&color=FF6B00&center=true&vCenter=true&repeat=true&width=500&height=28&lines=Final+Degree++%E2%86%92+Startup+%F0%9F%9A%80;Sprint+1+completed+%C2%B7+April+2026+%E2%9C%85;Cooking+the+future+of+gastronomy+%F0%9F%8D%B3" alt="footer typing"/>
+<strong>Savorealo</strong><br />
+Angular 21 SSR/PWA · Android Kotlin · GraphQL Yoga · Pothos · Prisma 7 · Cloudflare Workers · Supabase
 
-<br/><br/>
+<br /><br />
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0a0300,50:c45000,100:FF6B00&height=140&section=footer&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0a0300,50:c45000,100:FF6B00&height=120&section=footer&animation=fadeIn" width="100%" alt="Savorealo footer" />
 
 </div>
