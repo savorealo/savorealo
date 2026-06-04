@@ -42,9 +42,22 @@ El frontend web y la app Android consumen la API GraphQL del backend y utilizan 
   <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
+## Equipo de desarrollo
+
+| Nombre | Rol principal |
+|---|---|
+| **Adrián Romero Maldonado** | Frontend web (Angular 21) · Backend (API GraphQL) |
+| **Antonio Lorenzo Cano Jiménez** | Mobile Android (Kotlin · Jetpack Compose) |
+| **José María López González** | Mobile Android (Kotlin · Jetpack Compose) |
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
 ## Índice
 
 - [Funcionalidades principales](#funcionalidades-principales)
+- [Aportación por módulos](#aportación-por-módulos)
 - [Arquitectura](#arquitectura)
 - [Stack tecnológico](#stack-tecnológico)
 - [Workflows principales](#workflows-principales)
@@ -132,6 +145,46 @@ Operaciones destacadas:
 | `generateRecipe`, `createRecipePost` | Mutation | Genera o publica recetas. |
 
 El backend clasifica y traduce errores de base de datos en `src/lib/errors.ts` para evitar exponer mensajes técnicos al cliente.
+
+<div align="center">
+  <img src="./docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
+## Aportación por módulos
+
+El proyecto cubre de forma transversal los siguientes módulos del ciclo formativo:
+
+### Inglés
+
+Toda la base de código está escrita en inglés: nombres de variables, funciones, clases, constantes, comentarios técnicos, mensajes de error de la API y esquema GraphQL. La app soporta inglés como uno de sus 14 idiomas de interfaz, con un sistema de traducción estática (`TranslationService`) y traducción dinámica de contenido generado por usuarios (`ContentTranslationService` + MyMemory API). El README principal del repositorio `savorealo/savorealo` está disponible también en inglés (`README.en.md`).
+
+### IPE — Formación y Orientación Laboral
+
+El proyecto demuestra una organización profesional del trabajo en equipo: división de roles y responsabilidades entre tres desarrolladores, uso de ramas Git y pull requests para integrar cambios, definición de entornos (desarrollo, producción), gestión de secrets y variables de entorno para no exponer credenciales, y pipeline de CI/CD automatizado. La arquitectura por capas y el patrón Repository aplican principios de responsabilidad única y separación de intereses propios de entornos laborales reales.
+
+### Servicios y Procesos — Android
+
+La app Android implementa tareas en segundo plano con **WorkManager**: `PostUploadWorker` para subida diferida de publicaciones cuando se recupera conectividad, y `ReminderWorker` para recordatorios periódicos de recetas guardadas. Ambos workers usan constraints de red y se relanzan automáticamente si el proceso es interrumpido, siguiendo las guías de Android para tareas diferidas y persistentes.
+
+### Programación de Dispositivos Móviles — Android
+
+Aplicación Android nativa desarrollada con **Kotlin 2.2** y **Jetpack Compose**: interfaz declarativa con Material 3, navegación type-safe con Navigation Compose, inyección de dependencias con **Hilt** + KSP, persistencia local con **Room**, captura de fotografías con **CameraX**, autenticación y tiempo real con **Supabase KT** y consumo de la API GraphQL con **Retrofit + OkHttp**. La arquitectura separa claramente Remote Data Sources (comunicación con APIs) de Repositories (lógica de negocio), siguiendo Clean Architecture.
+
+### Acceso a Datos
+
+El proyecto combina múltiples estrategias de acceso a datos. En el backend, **Prisma 7** actúa como ORM type-safe sobre **PostgreSQL (Supabase)**, con Prisma Accelerate para connection pooling en el edge. En la app Android, **Room** proporciona persistencia local con DAOs y migraciones, permitiendo funcionamiento offline para recetas generadas. El frontend accede a datos de dominio vía **Apollo Angular** (GraphQL) y a autenticación/storage directamente vía **Supabase JS**. El patrón Repository abstrae el origen de los datos para los servicios de negocio.
+
+### Desarrollo de Interfaces
+
+El frontend web implementa una interfaz completa con **PrimeNG 21** (componentes de UI) y **Tailwind CSS 3** (utilidades de estilos), con modo oscuro/claro gestionado por `ThemeService` mediante `data-theme` en el elemento raíz y tokens CSS en `styles/tokens.css`. La app Android usa **Jetpack Compose** con **Material 3**, tema personalizado y soporte de modo oscuro. Ambas interfaces son responsivas, soportan RTL para árabe, y cuentan con animaciones, skeleton loaders e indicadores de carga.
+
+### Servidores y APIs
+
+El backend es una **API GraphQL** desplegada como **Cloudflare Worker** (edge serverless) con **GraphQL Yoga** + **Pothos** (schema code-first con plugins Prisma y Relay). Expone un único endpoint `POST /graphql` con paginación Relay para listas infinitas, autenticación mediante JWT verificado con HMAC-SHA256, manejo estructurado de errores (`src/lib/errors.ts`) y un endpoint `GET /health` para monitorización. El despliegue es continuo vía `wrangler deploy` y la configuración de red, CORS y contexto se gestiona en `src/index.ts`.
+
+### Sistema de Gestión Empresarial
+
+Savorealo incluye soporte para perfiles de **negocios gastronómicos** (`UserType: RESTAURANT`, `BAR`) con campos específicos como `specialty`, `phone` y `website` en `business_profiles`. La sección **Lugares** (`/places`) permite descubrir y reseñar restaurantes, bares, cafeterías y food trucks con filtros por tipo de cocina. El módulo de **IA** (`generateRecipe`, `myGenerations`) representa un servicio de valor añadido para el negocio. El backend incluye un sistema de **notificaciones**, **feed personalizado con scoring** (engagement + afinidad + frescura) y **mensajería directa** como herramientas de gestión de comunidad y fidelización.
 
 <div align="center">
   <img src="./docs/assets/divider.svg" width="100%" alt="" />
