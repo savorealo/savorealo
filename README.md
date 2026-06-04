@@ -404,7 +404,7 @@ export const environment = {
   production: false,
   supabaseUrl: 'https://<project-ref>.supabase.co',
   supabaseKey: '<supabase-anon-key>',
-  apiUrl: 'http://localhost:8787',  // o https://develop.app.savorealo.com/api en producción
+  apiUrl: 'http://localhost:8787',  // o https://app.savorealo.com/api en producción
 }
 ```
 
@@ -431,7 +431,8 @@ DIRECT_URL=postgresql://...@pooler.supabase.com:5432/postgres
 **Mobile Android** — `utils/Constants.kt`:
 
 ```kotlin
-const val URL = "https://develop.app.savorealo.com/api/"  // producción
+const val URL = "https://app.savorealo.com/api/"          // producción
+// const val URL = "https://develop.app.savorealo.com/api/" // desarrollo
 // const val URL = "http://10.0.2.2:8787/"                // emulador local
 // const val URL = "http://<IP_LAN>:8787/"                // dispositivo físico
 ```
