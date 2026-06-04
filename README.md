@@ -20,6 +20,12 @@
 
 <br /><br />
 
+<a href="https://gamma.app/docs/REWE-Digital-uiu9k0grzfewlti?mode=doc">
+  <img src="https://img.shields.io/badge/Presentación_del_proyecto-Ver_en_Gamma-FF6B00?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0300" alt="Presentación del proyecto" />
+</a>
+
+<br /><br />
+
 <img src="./docs/assets/divider.svg" width="100%" alt="" />
 
 </div>
@@ -44,11 +50,13 @@ El frontend web y la app Android consumen la API GraphQL del backend y utilizan 
 
 ## Equipo de desarrollo
 
-| Nombre | Rol principal |
+Los tres desarrolladores han contribuido de forma transversal a todas las partes del proyecto: frontend web, backend y aplicación Android. No hay una asignación exclusiva por capa.
+
+| Nombre | Contribución |
 |---|---|
-| **Adrián Romero Maldonado** | Frontend web (Angular 21) · Backend (API GraphQL) |
-| **Antonio Lorenzo Cano Jiménez** | Mobile Android (Kotlin · Jetpack Compose) |
-| **José María López González** | Mobile Android (Kotlin · Jetpack Compose) |
+| **Adrián Romero Maldonado** | Frontend web · Backend · Mobile Android |
+| **Antonio Lorenzo Cano Jiménez** | Frontend web · Backend · Mobile Android |
+| **José María López González** | Frontend web · Backend · Mobile Android |
 
 <div align="center">
   <img src="./docs/assets/divider.svg" width="100%" alt="" />
