@@ -51,7 +51,7 @@ The project is divided into three main applications:
 | **Backend** | [`savorealo/api`](https://github.com/savorealo/api) | GraphQL API deployed on Cloudflare Workers with GraphQL Yoga, Pothos, Prisma 7 and PostgreSQL/Supabase. |
 | **Android Mobile** | [`acanojiDev/TFG-LET-ME-COOK-MOBILE`](https://github.com/acanojiDev/TFG-LET-ME-COOK-MOBILE.git) | Native Android app with Kotlin, Jetpack Compose, Hilt, Room, Supabase and Retrofit. |
 
-The web frontend and the Android app consume the backend GraphQL API and use Supabase for authentication and storage. The backend validates the Supabase JWT and resolves domain operations against PostgreSQL.
+The web frontend and the Android app consume the backend GraphQL API and use Supabase for authentication, storage and real-time messaging. The backend (Cloudflare Worker) validates the Supabase JWT, resolves domain operations against PostgreSQL through **Cloudflare Hyperdrive** (edge connection pooling), and delegates AI recipe generation to **n8n** via asynchronous webhook. The frontend also invokes **Supabase Edge Functions** (`veganize-recipe`, `cooking-assistant`) backed by **GROQ Llama 3.3-70B** for real-time AI features.
 
 <div align="center">
   <img src="./docs/assets/divider.svg" width="100%" alt="" />
@@ -212,23 +212,56 @@ Savorealo includes support for **gastronomic business** profiles (`UserType: RES
 ## Architecture
 
 ```mermaid
-flowchart LR
-  U["User"] --> A["Angular 21 SSR/PWA<br/>savorealo_frontend"]
-  U --> M["Android Kotlin<br/>TFG-LET-ME-COOK-MOBILE"]
-  A -->|Apollo Angular<br/>/graphql| W["Cloudflare Worker<br/>GraphQL Yoga + Pothos"]
-  M -->|Retrofit<br/>/graphql| W
-  A -->|Auth / Storage| S["Supabase"]
-  M -->|Auth / Storage / Realtime| S
-  W -->|JWT Supabase| AUTH["Supabase Auth"]
-  W -->|Prisma 7 + adapter-pg| DB["PostgreSQL / Supabase"]
-  W --> H["/health"]
+flowchart TB
+  U["User"]
+
+  subgraph CLIENTS["Clients"]
+    A["Angular 21 SSR/PWA<br/>savorealo_frontend"]
+    M["Android Kotlin<br/>TFG-LET-ME-COOK-MOBILE"]
+  end
+
+  subgraph CF["Cloudflare Edge"]
+    W["Worker GraphQL<br/>Yoga + Pothos"]
+    HYP["Hyperdrive<br/>(connection pool)"]
+  end
+
+  subgraph SB["Supabase"]
+    AUTH["Auth · JWT"]
+    DB["PostgreSQL"]
+    STORE["Storage<br/>(post_media · avatars)"]
+    RT["Realtime<br/>(messages · notifs · presence)"]
+  end
+
+  subgraph AI["AI"]
+    N8N["n8n<br/>recipe-agent"]
+    EF["Edge Functions<br/>veganize-recipe · cooking-assistant"]
+    GROQ["GROQ API<br/>Llama 3.3-70B"]
+  end
+
+  U --> A & M
+  A & M -->|"Apollo / Retrofit — /graphql"| W
+  A & M -->|"Auth"| AUTH
+  A & M -->|"WebSocket"| RT
+  A -->|"Upload media"| STORE
+  A -->|"AI recipe chat (HTTP)"| N8N
+  A -->|"veganize · cooking"| EF
+  W -->|"JWT verify"| AUTH
+  W -->|"Prisma 7"| HYP
+  HYP -->|"pg"| DB
+  W -->|"Webhook async"| N8N
+  N8N -->|"ai_generations"| DB
+  EF --> GROQ
 
   classDef orange fill:#1a0800,stroke:#ff6b00,color:#fff;
   classDef amber fill:#211000,stroke:#ff9a00,color:#fff;
   classDef green fill:#071a0f,stroke:#27ae60,color:#fff;
+  classDef purple fill:#100820,stroke:#9b59b6,color:#fff;
+  classDef blue fill:#001020,stroke:#2980b9,color:#fff;
   class A,M,W orange;
-  class DB,S,AUTH green;
-  class U,H amber;
+  class DB,AUTH,STORE,RT green;
+  class HYP amber;
+  class N8N,EF,GROQ purple;
+  class U blue;
 ```
 
 <div align="center">
