@@ -20,8 +20,8 @@
 
 <br /><br />
 
-<a href="https://gamma.app/docs/REWE-Digital-uiu9k0grzfewlti?mode=doc">
-  <img src="https://img.shields.io/badge/Presentación_del_proyecto-Ver_en_Gamma-FF6B00?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0300" alt="Presentación del proyecto" />
+<a href="https://view.genially.com/6a1f17889a81f390c2b0572b">
+  <img src="https://img.shields.io/badge/Presentación_del_proyecto-Ver_en_Genially-FF6B00?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0300" alt="Presentación del proyecto" />
 </a>
 
 <br /><br />
