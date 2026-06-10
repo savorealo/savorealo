@@ -6,19 +6,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&repeat=true&width=820&height=52&lines=Red+social+gastron%C3%B3mica+con+IA;Angular+21+SSR%2FPWA+%C2%B7+Android+Kotlin;GraphQL+en+Cloudflare+Workers;Recetas%2C+posts%2C+lugares+y+comunidad" alt="Savorealo typing" />
 
-<br /><br />
 
-<img src="https://img.shields.io/badge/Savorealo-App_gastron%C3%B3mica-FF6B00?style=for-the-badge&labelColor=0a0300" alt="Savorealo" />
-&nbsp;
-<img src="https://img.shields.io/badge/Frontend-Angular_21-FF8C00?style=for-the-badge&logo=angular&logoColor=white&labelColor=0a0300" alt="Angular 21" />
-&nbsp;
-<img src="https://img.shields.io/badge/API-Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white&labelColor=0a0300" alt="Cloudflare Workers" />
-&nbsp;
-<img src="https://img.shields.io/badge/Mobile-Android_Kotlin-FF9A00?style=for-the-badge&logo=android&logoColor=white&labelColor=0a0300" alt="Android Kotlin" />
-&nbsp;
-<img src="https://img.shields.io/badge/GraphQL-Yoga_%2B_Pothos-E85D04?style=for-the-badge&logo=graphql&logoColor=white&labelColor=0a0300" alt="GraphQL" />
-
-<br /><br />
 
 <a href="https://view.genially.com/6a1f17889a81f390c2b0572b">
   <img src="https://img.shields.io/badge/Presentación_del_proyecto-Ver_en_Genially-FF6B00?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0300" alt="Presentación del proyecto" />
