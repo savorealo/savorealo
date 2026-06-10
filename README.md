@@ -514,18 +514,9 @@ curl http://localhost:8787/graphql \
   <img src="./docs/assets/divider.svg" width="100%" alt="" />
 </div>
 
-## Notas importantes
-
-- No subas secrets, JWT secrets, URLs privadas de base de datos ni service keys.
-- En mobile, evita hardcodear claves de Supabase o Google en código fuente antes de publicar builds.
-- Para desarrollo local completo, levanta primero el backend en `http://localhost:8787` y ajusta `apiUrl` del frontend.
-- Para Android Emulator, apunta la URL local a `http://10.0.2.2:8787/`; para móvil físico, usa la IP LAN del equipo.
-- Los errores de base de datos se traducen a mensajes controlados para el cliente y códigos GraphQL/HTTP coherentes.
-- `summary.md` contiene notas internas de trabajo y no forma parte de la documentación final del proyecto.
 
 <div align="center">
 
-<img src="./docs/assets/divider.svg" width="100%" alt="" />
 
 <br />
 
